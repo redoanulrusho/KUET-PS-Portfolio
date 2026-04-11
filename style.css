@@ -1,0 +1,231 @@
+
+    /* Fonts used for headline and body text */
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+    /* Global theme tokens */
+    :root {
+      --bg: #07090e;
+      --accent: #f2c94c;
+      --fb-blue: #1877F2;
+      --insta-pink: #E1306C;
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f5f6fb;
+  }
+
+    /* Base page styling and smooth scrolling */
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+  }
+
+    /* Full-page background image with dark overlay */
+  body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+          linear-gradient(rgba(7, 9, 14, 0.8), rgba(7, 9, 14, 0.95)),
+          url('kuetps.jpeg') center/cover no-repeat;
+      z-index: -1;
+  }
+
+    /* Glassmorphism navigation bar */
+  .glass-nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 95%;
+      max-width: 1200px;
+      background: rgba(11, 13, 19, 0.8);
+      backdrop-filter: blur(15px);
+      border-radius: 100px;
+      border: 1px solid var(--glass-border);
+      padding: 10px 25px;
+      z-index: 1000;
+  }
+
+  .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+  }
+
+  .logo span {
+      color: var(--accent);
+  }
+
+  .nav-links a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-left: 15px;
+      transition: 0.3s;
+      text-transform: uppercase;
+  }
+
+  .nav-links a:hover {
+      color: var(--accent);
+  }
+
+    /* Hero banner styling */
+  .hero {
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 10vw, 6rem);
+      margin: 0;
+      background: linear-gradient(to right, #fff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+    /* Main layout container */
+  .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+    /* Frosted card blocks used across sections */
+    .glass-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 30px;
+      margin-bottom: 60px;
+  }
+
+    /* Small uppercase section label */
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: var(--accent);
+      margin-bottom: 10px;
+  }
+
+    /* Spacing and separators between sections */
+    .section-spacer {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--glass-border);
+  }
+
+    /* Contact cards and social links */
+  .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+  }
+
+  .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 20px;
+      text-decoration: none;
+      color: white;
+      border: 1px solid transparent;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .contact-item .icon {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 1.5rem;
+      flex: 0 0 auto;
+  }
+
+  .contact-item .icon svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+  }
+
+  .contact-item .icon.fb {
+      color: var(--fb-blue);
+  }
+
+  .contact-item .icon.insta {
+      color: var(--insta-pink);
+  }
+
+  .contact-item .icon.phone {
+      color: var(--accent);
+  }
+
+  .contact-item .info {
+      min-width: 0;
+  }
+
+  .contact-item strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+  }
+
+  .contact-item p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      overflow-wrap: anywhere;
+  }
+
+    /* Interactive hover states for contact cards */
+  .contact-item:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.08);
+  }
+
+  .fb-link:hover {
+      border-color: var(--fb-blue);
+      box-shadow: 0 10px 20px rgba(24, 119, 242, 0.2);
+  }
+
+  .insta-link:hover {
+      border-color: var(--insta-pink);
+      box-shadow: 0 10px 20px rgba(225, 48, 108, 0.2);
+  }
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.5;
+      font-size: 0.8rem;
+  }
+
+    /* Mobile nav simplification */
+    @media (max-width: 850px) {
+      .nav-links {
+          display: none;
+      }
+
+      /* Hide nav on mobile for cleaner look */
+  }
