@@ -229,3 +229,58 @@
 
       /* Hide nav on mobile for cleaner look */
   }
+
+  /* Existing styles remain unchanged */
+
+  /* Active nav link */
+  .nav-links a.active {
+      color: var(--accent);
+      font-weight: 700;
+  }
+
+  /* Reveal animation */
+  .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+  }
+
+  .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  /* Back to top button */
+  #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(242, 201, 76, 0.4);
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+  }
+
+  #backToTop.show {
+      opacity: 1;
+      visibility: visible;
+  }
+
+  #backToTop:hover {
+      background: #e0b93d;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(242, 201, 76, 0.6);
+  }

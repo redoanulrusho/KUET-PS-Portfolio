@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,23 +29,22 @@
         </div>
     </nav>
 
-    <!-- Hero section with title and CTA -->
+    <!-- Hero section -->
     <header class="hero">
         <div class="hero-content">
             <span class="pre-title">Official Photography Club of KUET</span>
             <h1>KUET PS</h1>
-            
             <div class="hero-cta">
                 <a href="#projects" class="btn-primary">View Projects</a>
             </div>
         </div>
     </header>
 
-    <!-- Main content container -->
+    <!-- Main content -->
     <main class="container">
 
-        <!-- About section with text and stats -->
-        <section id="about" class="glass-card about-section">
+        <!-- About -->
+        <section id="about" class="glass-card about-section reveal">
             <div class="about-text">
                 <h2 class="section-label">About Us</h2>
                 <h3>Bridging Precision & Art</h3>
@@ -57,36 +58,37 @@
             </div>
         </section>
 
-        <!-- Projects placeholder section -->
-        <section id="projects" class="section-spacer">
+        <!-- Projects -->
+        <section id="projects" class="section-spacer reveal">
             <h2 class="section-label">Projects</h2>
             <div class="placeholder-grid">Gallery content coming soon...</div>
         </section>
 
-        <!-- Exhibitions placeholder section -->
-        <section id="exhibitions" class="section-spacer">
+        <!-- Exhibitions -->
+        <section id="exhibitions" class="section-spacer reveal">
             <h2 class="section-label">Exhibitions</h2>
             <div class="placeholder-grid">Exhibition highlights...</div>
         </section>
 
-        <!-- Contact cards for phone, email, and socials -->
-        <section id="contact" class="glass-card contact-section">
+        <!-- Contact -->
+        <section id="contact" class="glass-card contact-section reveal">
             <div class="contact-header">
                 <h2 class="section-label">Get In Touch</h2>
                 <h3>Connect with our Community</h3>
             </div>
 
             <div class="contact-grid">
-                <a href="tel:01876417437" class="contact-item">
-                    <span class="icon phone" aria-hidden="true">📞</span>
+                <a href="tel:01876417437" class="contact-item copy" data-copy="01876417437">
+                    <span class="icon phone">📞</span>
                     <div class="info">
                         <strong>Phone</strong>
                         <p>01876417437</p>
                     </div>
                 </a>
 
-                <a href="mailto:kuetphotographicsociety@gmail.com" class="contact-item">
-                    <span class="icon" aria-hidden="true">📧</span>
+                <a href="mailto:kuetphotographicsociety@gmail.com" class="contact-item copy"
+                    data-copy="kuetphotographicsociety@gmail.com">
+                    <span class="icon">📧</span>
                     <div class="info">
                         <strong>Email Address</strong>
                         <p>kuetphotographicsociety@gmail.com</p>
@@ -94,25 +96,15 @@
                 </a>
 
                 <a href="https://www.facebook.com/kuetps" target="_blank" class="contact-item fb-link">
-                    <span class="icon fb" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                            <path d="M21 12a9 9 0 1 0-10.4 8.9v-6.3H8.2V12h2.4V9.9c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.3h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.6h-2.3v6.3A9 9 0 0 0 21 12z" />
-                        </svg>
-                    </span>
-                    <div class="info">
-                        <strong>Facebook</strong>
+                    <span class="icon fb">f</span>
+                    <div class="info"><strong>Facebook</strong>
                         <p>Join the community</p>
                     </div>
                 </a>
 
                 <a href="https://www.instagram.com/kuetps.official/" target="_blank" class="contact-item insta-link">
-                    <span class="icon insta" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm5 3.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5zm0 2a2.5 2.5 0 1 0 2.5 2.5A2.5 2.5 0 0 0 12 10.5zm5.25-4a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" />
-                        </svg>
-                    </span>
-                    <div class="info">
-                        <strong>Instagram</strong>
+                    <span class="icon insta">📷</span>
+                    <div class="info"><strong>Instagram</strong>
                         <p>Follow our feed</p>
                     </div>
                 </a>
@@ -121,11 +113,16 @@
 
     </main>
 
-    <!-- Footer credit line -->
+    <!-- Back to top -->
+    <button id="backToTop">↑</button>
+
+    <!-- Footer -->
     <footer>
         <p>© 2026 KUET PS | Designed by Rusho</p>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
