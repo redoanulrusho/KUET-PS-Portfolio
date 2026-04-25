@@ -61,4 +61,68 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Gallery image viewer with back-button support
+    const viewer = document.getElementById('imageViewer');
+    const viewerImage = document.getElementById('viewerImage');
+    const viewerClose = document.querySelector('.viewer-close');
+    const viewerBackdrop = document.querySelector('.viewer-backdrop');
+    const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+    const galleryDetails = document.querySelectorAll('.gallery-details');
+
+    galleryDetails.forEach((detail) => {
+        detail.addEventListener('toggle', () => {
+            if (detail.open) {
+                galleryDetails.forEach((other) => {
+                    if (other !== detail) {
+                        other.open = false;
+                    }
+                });
+            }
+        });
+    });
+
+    const closeViewer = () => {
+        viewer.classList.remove('show');
+        viewer.setAttribute('aria-hidden', 'true');
+        viewerImage.src = '';
+    };
+
+    const openViewer = (src, alt) => {
+        viewerImage.src = src;
+        viewerImage.alt = alt || 'Expanded gallery image';
+        viewer.classList.add('show');
+        viewer.setAttribute('aria-hidden', 'false');
+        history.pushState({ galleryOpen: true }, '');
+    };
+
+    galleryThumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            openViewer(thumb.src, thumb.alt);
+        });
+    });
+
+    viewerClose.addEventListener('click', () => {
+        if (viewer.classList.contains('show')) {
+            history.back();
+        }
+    });
+
+    viewerBackdrop.addEventListener('click', () => {
+        if (viewer.classList.contains('show')) {
+            history.back();
+        }
+    });
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && viewer.classList.contains('show')) {
+            history.back();
+        }
+    });
+
+    window.addEventListener('popstate', () => {
+        if (viewer.classList.contains('show')) {
+            closeViewer();
+        }
+    });
 });
