@@ -20,8 +20,10 @@
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#exhibitions">Exhibitions</a>
                 <a href="#executives">Executives</a>
+                <a href="#post-review">Posts Review</a>
                 <a href="#posts">Posts</a>
                 <a href="#events">Events</a>
                 <a href="#contact">Contact</a>
@@ -58,52 +60,127 @@
             </div>
         </section>
 
+        <!-- Gallery -->
+        <section id="gallery" class="section-spacer reveal">
+            <h2 class="section-label">Gallery</h2>
+            <p class="section-intro">A quick visual sweep across recent exhibitions and campus walks.</p>
+            <div class="filter-bar gallery-filter" role="group" aria-label="Filter gallery">
+                <button class="filter-btn gallery-filter-btn active" type="button" data-gallery-filter="all">All</button>
+                <button class="filter-btn gallery-filter-btn" type="button" data-gallery-filter="arts">Arts of Bengal</button>
+                <button class="filter-btn gallery-filter-btn" type="button" data-gallery-filter="diversity">Diversity S05</button>
+                <button class="filter-btn gallery-filter-btn" type="button" data-gallery-filter="frozen">Frozen in Time 2.0</button>
+            </div>
+            <div class="gallery-wall">
+                <figure class="gallery-item wide" data-gallery="arts">
+                    <img class="gallery-thumb" data-category="arts" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.08%20AM.jpeg" alt="Arts of Bengal wide shot">
+                    <figcaption>Arts of Bengal: daily rituals</figcaption>
+                </figure>
+                <figure class="gallery-item" data-gallery="arts">
+                    <img class="gallery-thumb" data-category="arts" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.07%20AM.jpeg" alt="Arts of Bengal street performance">
+                    <figcaption>Craft and color</figcaption>
+                </figure>
+                <figure class="gallery-item tall" data-gallery="diversity">
+                    <img class="gallery-thumb" data-category="diversity" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM.jpeg" alt="Diversity S05 portrait">
+                    <figcaption>Faces of diversity</figcaption>
+                </figure>
+                <figure class="gallery-item" data-gallery="diversity">
+                    <img class="gallery-thumb" data-category="diversity" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM%20(2).jpeg" alt="Diversity S05 workshop">
+                    <figcaption>Studio textures</figcaption>
+                </figure>
+                <figure class="gallery-item wide" data-gallery="frozen">
+                    <img class="gallery-thumb" data-category="frozen" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.11%20AM.jpeg" alt="Frozen in Time 2.0 landscape">
+                    <figcaption>Frozen in Time: calm light</figcaption>
+                </figure>
+                <figure class="gallery-item" data-gallery="frozen">
+                    <img class="gallery-thumb" data-category="frozen" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.10%20AM.jpeg" alt="Frozen in Time 2.0 candid">
+                    <figcaption>Quiet moments</figcaption>
+                </figure>
+            </div>
+        </section>
+
         <!-- Projects -->
         <section id="projects" class="section-spacer reveal">
             <h2 class="section-label">Projects</h2>
+            <div class="filter-bar" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" type="button" data-filter="all">All</button>
+                <button class="filter-btn" type="button" data-filter="arts">Arts of Bengal</button>
+                <button class="filter-btn" type="button" data-filter="diversity">Diversity S05</button>
+                <button class="filter-btn" type="button" data-filter="frozen">Frozen in Time 2.0</button>
+            </div>
+            <article class="featured-project">
+                <div class="featured-media">
+                    <span class="featured-badge">Featured</span>
+                    <img src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.07%20AM%20(1).jpeg" alt="Arts of Bengal featured" loading="lazy" decoding="async">
+                </div>
+                <div class="featured-content">
+                    <p class="featured-kicker">Featured Series</p>
+                    <h3>Arts of Bengal</h3>
+                    <p>A photo story celebrating the crafts, rituals, and daily life that shape Bengal's cultural rhythm.</p>
+                    <div class="featured-meta">
+                        <span>36 photos</span>
+                        <span>2 months of work</span>
+                        <span>On-campus exhibition</span>
+                    </div>
+                    <a class="btn-ghost" href="#exhibitions">See Exhibition</a>
+                </div>
+            </article>
             <div class="projects-grid">
-                <article class="project-card">
+                <article class="project-card" data-category="arts">
                     <img class="project-cover" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.07%20AM%20(1).jpeg" alt="Arts of Bengal featured photo">
                     <div class="project-body">
                         <h3>ARTS OF BENGAL</h3>
                         <details class="gallery-details">
                             <summary>View all images</summary>
                             <div class="gallery-grid">
-                                <img class="gallery-thumb" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.07%20AM%20(1).jpeg" alt="Arts of Bengal photo 1">
-                                <img class="gallery-thumb" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.07%20AM.jpeg" alt="Arts of Bengal photo 2">
-                                <img class="gallery-thumb" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.08%20AM.jpeg" alt="Arts of Bengal photo 3">
+                                <img class="gallery-thumb" data-category="arts" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.07%20AM%20(1).jpeg" alt="Arts of Bengal photo 1">
+                                <img class="gallery-thumb" data-category="arts" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.07%20AM.jpeg" alt="Arts of Bengal photo 2">
+                                <img class="gallery-thumb" data-category="arts" src="ARTS%20OF%20BENGAL/WhatsApp%20Image%202026-04-26%20at%2012.14.08%20AM.jpeg" alt="Arts of Bengal photo 3">
                             </div>
                         </details>
                     </div>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-category="diversity">
                     <img class="project-cover" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM%20(1).jpeg" alt="Diversity S05 featured photo">
                     <div class="project-body">
                         <h3>DIVERSITY S05</h3>
                         <details class="gallery-details">
                             <summary>View all images</summary>
                             <div class="gallery-grid">
-                                <img class="gallery-thumb" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM%20(1).jpeg" alt="Diversity S05 photo 1">
-                                <img class="gallery-thumb" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM%20(2).jpeg" alt="Diversity S05 photo 2">
-                                <img class="gallery-thumb" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM.jpeg" alt="Diversity S05 photo 3">
+                                <img class="gallery-thumb" data-category="diversity" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM%20(1).jpeg" alt="Diversity S05 photo 1">
+                                <img class="gallery-thumb" data-category="diversity" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM%20(2).jpeg" alt="Diversity S05 photo 2">
+                                <img class="gallery-thumb" data-category="diversity" src="DIVERSITY%20S05/WhatsApp%20Image%202026-04-26%20at%2012.13.38%20AM.jpeg" alt="Diversity S05 photo 3">
                             </div>
                         </details>
                     </div>
                 </article>
-                <article class="project-card">
+                <article class="project-card" data-category="frozen">
                     <img class="project-cover" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.10%20AM.jpeg" alt="Frozen in Time 2.0 featured photo">
                     <div class="project-body">
                         <h3>FROZEN IN TIME 2.0</h3>
                         <details class="gallery-details">
                             <summary>View all images</summary>
                             <div class="gallery-grid">
-                                <img class="gallery-thumb" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.10%20AM.jpeg" alt="Frozen in Time 2.0 photo 1">
-                                <img class="gallery-thumb" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.11%20AM%20(1).jpeg" alt="Frozen in Time 2.0 photo 2">
-                                <img class="gallery-thumb" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.11%20AM.jpeg" alt="Frozen in Time 2.0 photo 3">
+                                <img class="gallery-thumb" data-category="frozen" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.10%20AM.jpeg" alt="Frozen in Time 2.0 photo 1">
+                                <img class="gallery-thumb" data-category="frozen" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.11%20AM%20(1).jpeg" alt="Frozen in Time 2.0 photo 2">
+                                <img class="gallery-thumb" data-category="frozen" src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.11%20AM.jpeg" alt="Frozen in Time 2.0 photo 3">
                             </div>
                         </details>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <!-- CTA band -->
+        <section class="cta-band reveal" aria-label="Join KUET PS">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2>Join the KUET PS Community</h2>
+                    <p>Workshops, photowalks, exhibitions, and a place to grow your eye for storytelling.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="#contact" class="btn-primary">Become a Member</a>
+                    <a href="#events" class="btn-ghost">See Upcoming Events</a>
+                </div>
             </div>
         </section>
 
@@ -122,6 +199,18 @@
                 <article class="exhibit-card">
                     <img src="FROZEN%20IN%20TIME%202.0/WhatsApp%20Image%202026-04-26%20at%2012.13.10%20AM.jpeg" alt="Champions of Frozen in Time 2.0">
                     <h3>Champions of Frozen in Time 2.0</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- Posts Review -->
+        <section id="post-review" class="section-spacer reveal">
+            <h2 class="section-label">Posts Review</h2>
+            <p class="section-intro">Highlights from the latest announcements and series notes.</p>
+            <div id="postReviewGrid" class="post-review-grid">
+                <article class="review-card loading">
+                    <h3>Loading posts...</h3>
+                    <p>Fetching the latest updates.</p>
                 </article>
             </div>
         </section>
@@ -152,21 +241,21 @@
         <section id="events" class="section-spacer reveal">
             <h2 class="section-label">Events</h2>
             <div class="events-timeline">
-                <div class="timeline-item">
+                <div class="timeline-item" data-event-id="photowalk" data-date="2026-05-08" data-time="16:30" data-location="Central Field">
                     <div class="timeline-date">May 08</div>
                     <div class="timeline-content">
                         <h3>Campus Photowalk</h3>
                         <p>Meet at central field, 4:30 PM. Theme: symmetry and shadows.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-event-id="portrait" data-date="2026-05-18" data-time="17:00" data-location="Studio Lab">
                     <div class="timeline-date">May 18</div>
                     <div class="timeline-content">
                         <h3>Portrait Masterclass</h3>
                         <p>Indoor lighting demo and live critique with alumni speakers.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-event-id="prep" data-date="2026-06-02" data-time="18:00" data-location="Exhibition Hall">
                     <div class="timeline-date">June 02</div>
                     <div class="timeline-content">
                         <h3>Exhibition Prep Night</h3>
@@ -174,6 +263,35 @@
                     </div>
                 </div>
             </div>
+            <form id="eventRegistration" class="event-form" aria-label="Event registration">
+                <div class="event-form-header">
+                    <h3>Register for an Event</h3>
+                    <p>Get a quick reminder and download a calendar invite.</p>
+                </div>
+                <div class="event-form-grid">
+                    <label>
+                        Full name
+                        <input type="text" name="fullName" placeholder="Your name" required>
+                    </label>
+                    <label>
+                        Phone
+                        <input type="tel" name="phone" placeholder="01XXXXXXXXX" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="you@email.com" required>
+                    </label>
+                    <label>
+                        Choose event
+                        <select name="eventId" id="eventSelect" required></select>
+                    </label>
+                </div>
+                <div class="event-form-actions">
+                    <button type="submit" class="btn-primary">Register</button>
+                    <button type="button" id="addToCalendar" class="btn-ghost" disabled>Add to Calendar</button>
+                    <span id="eventFormStatus" class="form-status" role="status" aria-live="polite"></span>
+                </div>
+            </form>
         </section>
 
         <!-- Contact -->
